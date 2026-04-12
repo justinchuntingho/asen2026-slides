@@ -1,0 +1,264 @@
+<!doctype html>
+<html lang="en">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+
+	<title></title>
+
+	<link rel="stylesheet" href="dist/reset.css">
+	<link rel="stylesheet" href="dist/reveal.css">
+	<link rel="stylesheet" href="dist/theme/scipo.css">
+
+	<!-- Theme used for syntax highlighted code -->
+	<link rel="stylesheet" href="plugin/highlight/monokai.css">
+	<style>
+		.withbg{background-color:rgba(255,255,255,0.7);}
+		.reveal .slides section .highlight-red {color: #FF6666; }
+		.reveal .slides section .highlight-green {color: #66ff66; }
+		.reveal .slides section .highlight-blue {color: #3399ff; }
+
+		  /* slide-level wrapper */
+		  .table-slide {
+		    font-size: 0.6em;    
+		    line-height: 1.25;
+		  }
+
+		  /* scroll area so wide tables don't overflow */
+		  .table-slide .table-scroll {
+		    max-height: 60vh;
+		    overflow-y: auto;
+		    overflow-x: hidden;
+		  }
+
+		  /* clean table look */
+		  .table-slide table {
+		    width: 100%;
+		    border-collapse: collapse;
+		  }
+
+		  .table-slide th,
+		  .table-slide td {
+		    padding: 0.25em 0.4em;
+		    text-align: right;
+
+		    /* remove vertical lines */
+		    border-left: none;
+		    border-right: none;
+
+		    /* subtle horizontal separators only */
+		    border-top: none;
+		    border-bottom: 1px solid #ccc;
+		  }
+
+		  /* header row slightly stronger line */
+		  .table-slide thead th {
+		    border-bottom: 2px solid #999;
+		    text-align: left;
+		  }
+
+		  /* first column always left-aligned */
+		  .table-slide th:first-child,
+		  .table-slide td:first-child {
+		    text-align: left;
+		  }
+	</style>
+</head>
+<body>
+	<div class="reveal">
+		<div class="slides">
+				<section>
+				<div class="withbg">
+					<br>
+					<h3>Can Machines Imagine Communities?</h3><h4 style="color:#E6142D">Promises and Limits of GenAI in Nationalism Research</h4>
+					<br>
+
+					<h4 style ="color:#333"><b>Justin Chun-ting Ho</b><br><small>National Yang Ming Chiao Tung University</small></h4>
+
+				</div>
+			</section>
+    <section>
+      <h3>What is GenAI?</h3>
+    </section>
+    <section>
+      <h2>AI is a Stochastic Parrots 🦜</h2>
+    </section>
+    <section data-background-image="bender.png" data-background-size="contain">
+    	<div class="withbg">
+    	      <blockquote>An [LLM] is a system for haphazardly stitching together sequences of linguistic forms it has observed in its vast training data, according to probabilistic information about how they combine, but without any reference to meaning: a stochastic parrot.</blockquote>
+    	  </div>
+    </section>
+    <section>
+      <h3>On Stochastic Parrot</h3>
+      <ul>
+        <li>LLM is trained on massive datasets (aka. the Internet)</li>
+        <li>The heart of LLM is Next-Token Prediction:<br>The cat sat on the _____.</li>
+      </ul>
+    </section>
+     <section>
+      <h3>Implications</h3>
+      <ul>
+        <li>AI has an extremely large knowledge base</li>
+        <li>AI is good at analysing things that has been seen before, but struggles for anything unseen</li>
+        <li>AI does not really "understand" things, it is just probablity</li>
+      </ul>
+    </section>
+     <section>
+     	AI is useful when you analyse things that requires <br><em>high amount of background knowledge</em>, have <em>happened before</em>, and do not require <em>deep understanding</em>.
+     </section>
+     <section>
+     	<h2>Two Challenges in Nationalism Studies*</h2><small>* and how AI can be helpful</small>
+     </section>
+     <section>
+     	<h3>1. Studying Nationalism is Difficult</h3>
+     </section>
+     <section>
+     	<h3>Let's play a game</h3>
+     </section>
+     <section>
+     	<b>Is this a national symbol? If so, which country?</b><br>
+     	<img src="Formosan_Black_Bear.JPG" width="30%">
+     </section>
+     <section>
+     	<b>What ChatGPT said...</b>
+     	<img src="gpt2.png" width="70%">
+     </section>  
+     <section>
+     	<b>Is this a national symbol? If so, which country?</b><br>
+     	<img src="Urocissa_caerulea.jpg" width="50%">
+     </section>
+      <section>
+     	<b>What ChatGPT said...</b>
+     	<img src="gpt3.png" width="70%">
+     </section>  
+     <section>
+     	<b>Is this a national symbol? If so, which country?</b><br>
+     	<img src="Oncorhynchus_masou_formosanus.jpg" width="50%">
+     </section>
+      <section>
+     	<b>What ChatGPT said...</b>
+     	<img src="gpt4.png" width="70%">
+     </section>
+     <section>
+      <h3>Identifying National Symbol: Human vs LLM</h3>
+      <ul>
+        <li>Dataset of 1797 images of national symbol from Wikipedia and 2000 images of random objects from Common Objects in Context</li>
+        <li>Automated classification with GPT-5.4</li>
+        <li>Hired 130 crowdworker from Prolific to annotate a sample of 420 images (1300 annotations in total, majority rule)</li>
+      </ul>
+    </section>
+     <section>
+     	<img src="overall_accuracy_comparison.png" width="70%">
+     </section>
+      <section>
+     	<img src="continent_crowd_nat.png" width="70%">
+     </section>
+     <section>
+     	<img src="continent_crowd_country.png" width="70%">
+     </section>
+        <section>
+	     		<img src="continent_raw_accuracy.png" width="70%">
+	     	</section>
+     <section>
+      <h3>Takeaways</h3>
+      <ul>
+        <li>Identifying nationalism requires a lot of background knowledge (cultural, political, lingusitic, etc.)</li>
+        <li>AI is not perfect, but human beings are not doing a very good job either</li>
+        <li>GPT annotation costed $2, crowdworker costed $120</li>
+      </ul>
+    </section>
+
+     <section>
+     	<h3>2. Nationalism Studies is Not Very Diverse</h3>
+     </section>
+     <section>
+	     	<section>
+	     		<img src="country_barplot_top30.png" width="70%">
+	     	</section>
+	      <section>
+	      <h3>Technical Notes</h3>
+	      <ul>
+	        <li>Dimensions API to obtain all articles from <em>Nations and Nationalism</em>, <em>Ethnic and Racial Studies</em>, and <em>Nationalities Papers</em></li>
+	        <li>Automated classification with GPT-5.4 to extract the countries that a study is about</li>
+	        <li>Full validation not yet completed, do not cite me yet</li>
+	      </ul>
+	    </section>
+    </section>
+    	   <section>
+	     		<img src="country_time_series_percent_highlighted.png" width="70%">
+	     	</section>
+     <section>
+      <h3>Diversity in Nationalism Studies</h3>
+      <ul>
+        <li>Studying nationalism is very difficult</li>
+        <li>The inclusion/exclusion of a country is both:
+        	<ol>
+        		<li>limited by our background knowledge</li>
+        		<li>driven by our personal experience</li>
+        	</ol>
+        </li>
+        <li>I think AI can help <br><small>(with a BIG caveat)</small></li>
+      </ul>
+    </section>
+      <section>
+     	<img src="continent_llm_nat.png" width="70%">
+     </section>
+     <section>
+     	<img src="continent_llm_country.png" width="70%">
+     </section>
+     <section>
+     	 <h2>Conclusion</h2>
+     </section>
+     <section>
+      <h3>AI has the potential to:        </h3>
+
+        	<ol>
+        		<li>make studying nationalism (a tiny bit) easier</li>
+        		<li>make nationalism studies more diverse*</li>
+        	</ol>
+    </section>
+     <section>
+     	 <h2>Yes, BUT...</h2>
+     </section>
+     <section>
+     	<img src="ccr.png" width="40%">
+     </section>
+
+     <section>
+     	<img src="polcom_opinion.png" width="50%">
+     </section>
+     <section>
+     	 <h3>AI is a powerful tool, but reflective judgment is the key.</h3>
+     </section>
+
+
+
+
+
+
+
+						<section>
+							<h2>Thank You!</h2>
+							<p>LinkedIn: justinchuntingho<br>Github: justinchuntingho<br>Email: jcho@nycu.edu.tw</p>
+						</section>
+				</div>
+			</div>
+
+			<script src="dist/reveal.js"></script>
+			<script src="plugin/notes/notes.js"></script>
+			<script src="plugin/markdown/markdown.js"></script>
+			<script src="plugin/highlight/highlight.js"></script>
+			<script>
+			// More info about initialization & config:
+			// - https://revealjs.com/initialization/
+			// - https://revealjs.com/config/
+				Reveal.initialize({
+					hash: true,
+					slideNumber: true,
+
+				// Learn about plugins: https://revealjs.com/plugins/
+					plugins: [ RevealMarkdown, RevealHighlight, RevealNotes ]
+				});
+			</script>
+		</body>
+		</html>
